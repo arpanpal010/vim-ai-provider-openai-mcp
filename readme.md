@@ -22,8 +22,10 @@ This plugin requires
 
 * Binaries/Services
 
-    Also, as a precursory step, any of the mcp application-runners (like
-    `uv` for `uvx`, `nodejs`/`npm` for `npx`, or `docker`) and their
+    As a precursory step, any of the mcp application-runners (like
+    [uv](https://docs.astral.sh/uv/) for `uvx`,
+    [nodejs](https://nodejs.org/)/`npm` for `npx`, or
+    [docker](https://docs.docker.com/engine/install/)) and their
     dependencies need to be setup on the machine as required by the
     configuration.
 
@@ -32,7 +34,8 @@ installed before:
 
 ```vim
 Plug 'madox2/vim-ai'
-Plug 'kracejic/vim-ai-provider-openai-mcp'
+Plug 'arpanpal010/vim-ai-provider-openai-mcp'
+" original credit: 'kracejic/vim-ai-provider-openai-mcp'
 ```
 
 ## Example chat

@@ -739,7 +739,7 @@ class MCPManager(object):
         # individual MCP configurations start trying to put stuff in it
         await asyncio.wait_for(self.ev_init_done.wait(), self.timeout_init_done)
 
-        def _isToolEnabled(conf: Dict[str, any]) -> bool:
+        def _is_tool_enabled(conf: Dict[str, any]) -> bool:
             # skipped if either is set
             #   "disabled": true
             #   "enabled":  false
@@ -748,7 +748,7 @@ class MCPManager(object):
 
         # servers under key 'mcpServers'
         for name, conf in config.get("mcpServers", {}).items():
-            if _isToolEnabled(conf):
+            if _is_tool_enabled(conf):
                 # self.utils.print_debug(f"{self.__class__.__name__}: INFO: loading tool {len(self.clients.values())+1} {name}")
                 # self.utils.print_debug(f"{self.__class__.__name__}: {conf}")
                 self.clients[name] = MCPClient(self._exit_stack, name, conf, self.utils)
